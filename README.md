@@ -1,18 +1,18 @@
 # 🎓 Repository Tugas Kelompok - Pemrograman Berbasis Framework
 
-Repository ini dibuat untuk mengompilasi dan mengelola seluruh hasil proyek perkuliahan **Pemrograman Berbasis Framework**, mencakup tugas Ujian Tengah Semester (UTS) dan Ujian Akhir Semester (UAS)[cite: 4, 5].
+Repository ini dibuat untuk mengompilasi dan mengelola seluruh hasil proyek perkuliahan **Pemrograman Berbasis Framework**, mencakup tugas Ujian Tengah Semester (UTS) dan Ujian Akhir Semester (UAS).
 
 ---
 
 ## 👥 Anggota Kelompok
 
-| No | Nama Lengkap | NIM | Peran / Kontribusi |
-|:---:|:---|:---:|:---|
-| 1 | **Achmad Gibran** | 202412003 | Lead Developer (Laravel, UI/UX & GitHub Management) |
-| 2 | **Muhammad Ikbal** | 202412008 | Contributor & Testing |
-| 3 | **Mosyarofah** | 202412032 | Contributor & Technical Documentation |
-| 4 | **Vanesa Gladisya Mamanua** | 202412021 | Contributor & UI Design |
-| 5 | **Sarmila** | 202312080 | Contributor & Data Collection |
+| No | Nama Lengkap | NIM |
+|:---:|:---|:---:|
+| 1 | **Achmad Gibran** | 202412003 |
+| 2 | **Muhammad Ikbal** | 202412008 |
+| 3 | **Mosyarofah** | 202412032 |
+| 4 | **Vanesa Gladisya Mamanua** | 202412021 |
+| 5 | **Sarmila** | 202312080 |
 
 ---
 
