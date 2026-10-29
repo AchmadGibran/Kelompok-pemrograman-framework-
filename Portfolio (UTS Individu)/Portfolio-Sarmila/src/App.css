@@ -1,0 +1,622 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
+
+/* =========================
+   WARNA DAN PENGATURAN DASAR
+========================= */
+
+:root {
+  --cream: #f1e9dc;
+  --paper: #faf8f3;
+  --ink: #29251f;
+  --muted: #7c7469;
+  --line: #ded5c8;
+  --accent: #a48e70;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100%;
+}
+
+.portfolio {
+  width: min(100%, 1100px);
+  margin: 0 auto;
+  overflow: hidden;
+  color: var(--ink);
+  background: var(--paper);
+  box-shadow: 0 10px 45px #30271912;
+}
+
+/* =========================
+   SAMPUL PORTOFOLIO
+========================= */
+
+.cover {
+  min-height: 520px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  align-items: center;
+  gap: 30px;
+  padding: 60px 8%;
+  background:
+    radial-gradient(circle at 10% 0%, #fffaf1 0, transparent 36%),
+    linear-gradient(130deg, #f6f0e6, #e6dac9);
+}
+
+.cover::before,
+.cover::after {
+  content: "";
+  position: absolute;
+  border: 1px solid #b8aa961f;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.cover::before {
+  width: 300px;
+  height: 300px;
+  top: -140px;
+  left: -80px;
+}
+
+.cover::after {
+  width: 240px;
+  height: 240px;
+  right: -100px;
+  bottom: -100px;
+}
+
+.cover-text {
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  margin-bottom: 18px;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+.cover h1,
+.section-heading h2,
+.footer h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 600;
+}
+
+.cover h1 {
+  margin-bottom: 25px;
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 1.05;
+  letter-spacing: -2px;
+}
+
+.name {
+  margin-bottom: 18px;
+  font-size: 13px;
+  line-height: 2.1;
+  letter-spacing: 5px;
+}
+
+.cover-campus {
+  max-width: 230px;
+  margin-bottom: 28px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.website {
+  display: inline-block;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--ink);
+  color: var(--ink);
+  font-size: 11px;
+  text-decoration: none;
+}
+
+.cover-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(5deg);
+}
+
+.photo-frame {
+  width: min(100%, 300px);
+  height: 365px;
+  padding: 8px;
+  overflow: hidden;
+  border: 2px solid var(--ink);
+  border-radius: 30px 30px 0 0;
+  background: #fff;
+}
+
+.photo-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 22px 22px 0 0;
+}
+
+.cover-number {
+  position: absolute;
+  bottom: 22px;
+  left: 8%;
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+
+/* =========================
+   BAGIAN UMUM
+========================= */
+
+.section {
+  padding: 65px 8%;
+}
+
+.profile,
+.skills {
+  background: var(--paper);
+}
+
+.section-heading {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.section-number {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--accent);
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+.section-heading h2 {
+  margin-bottom: 10px;
+  font-size: clamp(34px, 5vw, 48px);
+  line-height: 1.2;
+}
+
+.section-heading>p {
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: 2.5px;
+}
+
+/* =========================
+   TENTANG SAYA
+========================= */
+
+.profile-description {
+  max-width: 750px;
+  margin: 0 auto 32px;
+  color: #5e584f;
+  font-size: 13px;
+  line-height: 2;
+  text-align: center;
+}
+
+.profile-description p+p {
+  margin-top: 12px;
+}
+
+.identity-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 35px;
+}
+
+.identity-item {
+  min-width: 0;
+  padding: 20px 15px;
+  border-top: 1px solid var(--line);
+  background: #f4efe6;
+}
+
+.identity-item span,
+.card-label {
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: 1.5px;
+}
+
+.identity-item h3 {
+  margin-top: 12px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 16px;
+  overflow-wrap: anywhere;
+}
+
+/* =========================
+   PENDIDIKAN DAN LOGO KAMPUS
+========================= */
+
+.education,
+.experience {
+  background: linear-gradient(145deg, #f0e8dc, #faf8f3 70%);
+}
+
+.education-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 30px;
+  border: 1px solid var(--line);
+  background: #fffdf9;
+  box-shadow: 0 8px 25px #30271908;
+}
+
+/* Kotak tempat logo kampus */
+
+.education-mark {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  background: #ffffff;
+}
+
+/* Gambar logo kampus */
+
+.education-mark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.education-card h3 {
+  margin: 10px 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+.education-card p {
+  color: #625b52;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.education-card .student-number {
+  margin-top: 4px;
+}
+
+/* =========================
+   KEAHLIAN
+========================= */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.skill-card {
+  min-width: 0;
+  padding: 25px;
+  border: 1px solid var(--line);
+  background: #f5f0e8;
+  transition: transform 0.25s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+}
+
+.skill-card>span {
+  color: var(--accent);
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.skill-card h3 {
+  margin: 15px 0 9px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 21px;
+}
+
+.skill-card p {
+  min-height: 40px;
+  color: #71695e;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.skill-line {
+  width: 40px;
+  height: 2px;
+  margin-top: 15px;
+  background: var(--accent);
+}
+
+/* =========================
+   PENGALAMAN DAN PROYEK
+========================= */
+
+.experience-content {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  align-items: start;
+  gap: 32px;
+}
+
+.experience-photo {
+  padding: 8px;
+  border: 1px solid var(--line);
+  background: #ffffff;
+  box-shadow: 0 8px 24px #30271912;
+}
+
+.experience-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+.experience-photo>span {
+  display: block;
+  padding: 13px 4px 5px;
+  color: var(--muted);
+  font-size: 8px;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+.intro {
+  margin-bottom: 25px;
+  color: #625b52;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.timeline-item {
+  margin-bottom: 22px;
+  padding: 0 0 5px 17px;
+  border-left: 1px solid #b7a68e;
+}
+
+.timeline-item>span {
+  color: var(--accent);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+.timeline-item h3 {
+  margin: 9px 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+.timeline-item>p {
+  color: #625b52;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 13px;
+}
+
+.tech-tags span {
+  padding: 6px 10px;
+  border: 1px solid #d7cbbb;
+  color: #625747;
+  font-size: 10px;
+}
+
+/* =========================
+   KONTAK
+========================= */
+
+.footer {
+  padding: 55px 8% 28px;
+  background: #e9dfd1;
+  text-align: center;
+}
+
+.footer>p:first-child {
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+
+.footer h2 {
+  margin: 13px 0;
+  font-size: clamp(34px, 5vw, 46px);
+}
+
+.footer-description {
+  max-width: 400px;
+  margin: 0 auto 25px;
+  color: #625b52;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.contact-links a {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: var(--ink);
+  font-size: 12px;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+}
+
+.contact-links a span {
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.back-top {
+  display: inline-block;
+  margin: 15px 0 30px;
+  color: var(--ink);
+  font-size: 11px;
+  text-decoration: none;
+}
+
+.copyright {
+  display: block;
+  padding-top: 20px;
+  border-top: 1px solid #cfc3b2;
+  color: var(--muted);
+  font-size: 8px;
+  letter-spacing: 1.5px;
+}
+
+/* =========================
+   TAMPILAN TABLET DAN HP
+========================= */
+
+@media (max-width: 600px) {
+  .cover {
+    min-height: 370px;
+    grid-template-columns: 1fr 0.85fr;
+    gap: 12px;
+    padding: 40px 6%;
+  }
+
+  .cover h1 {
+    font-size: clamp(31px, 7vw, 43px);
+    letter-spacing: -1px;
+  }
+
+  .eyebrow {
+    font-size: 8px;
+    letter-spacing: 1.5px;
+  }
+
+  .name {
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+
+  .cover-campus {
+    font-size: 9px;
+  }
+
+  .photo-frame {
+    height: 245px;
+    padding: 6px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .photo-frame img {
+    border-radius: 14px 14px 0 0;
+  }
+
+  .section {
+    padding: 45px 6%;
+  }
+
+  .identity-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .identity-item {
+    padding: 16px;
+  }
+
+  .education-card {
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .education-mark {
+    width: 75px;
+    height: 75px;
+    padding: 5px;
+  }
+
+  .education-card h3 {
+    font-size: 18px;
+  }
+
+  .skills-grid {
+    gap: 10px;
+  }
+
+  .skill-card {
+    padding: 17px;
+  }
+
+  .skill-card h3 {
+    font-size: 17px;
+  }
+
+  .experience-content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .experience-photo img {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+/* =========================
+   HP LAYAR KECIL
+========================= */
+
+@media (max-width: 380px) {
+  .cover {
+    grid-template-columns: 1fr 0.8fr;
+    padding-inline: 5%;
+  }
+
+  .photo-frame {
+    height: 200px;
+  }
+
+  .cover-number {
+    font-size: 8px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .education-card {
+    flex-direction: column;
+  }
+
+  .education-mark {
+    width: 85px;
+    height: 85px;
+  }
+}
